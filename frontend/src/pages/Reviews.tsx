@@ -1,4 +1,4 @@
-import { Table, Tag, Input, Select, Button } from 'antd'
+import { Table, Tag, Button } from 'antd'
 import { useEffect, useState } from 'react'
 import { getReviews } from '../services/api'
 import { useNavigate } from 'react-router-dom'

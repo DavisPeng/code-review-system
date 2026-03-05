@@ -5,7 +5,7 @@ import { getProjects, getNotificationConfig, createNotificationConfig, testNotif
 export default function Notifications() {
   const [projects, setProjects] = useState<any[]>([])
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
-  const [config, setConfig] = useState<any>(null)
+  const [, setConfig] = useState<any>(null)
   const [form] = Form.useForm()
   const [testing, setTesting] = useState(false)
 

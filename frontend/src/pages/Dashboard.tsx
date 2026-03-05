@@ -1,5 +1,5 @@
 import { Card, Row, Col, Statistic, Table } from 'antd'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
+import { Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import { useEffect, useState } from 'react'
 import { getStats } from '../services/api'
 
@@ -63,7 +63,7 @@ export default function Dashboard() {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {severityData.map((entry, index) => (
+                  {severityData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

@@ -4,7 +4,7 @@ Main entry point for the backend API
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import webhooks, reviews, projects, rules, stats, notifications
+from app.api import webhooks, reviews, projects, rules, stats, notifications, auth
 from app.config import settings
 from app.database import engine, Base
 
@@ -47,6 +47,7 @@ app.include_router(projects.router, prefix="/api/v1", tags=["projects"])
 app.include_router(rules.router, prefix="/api/v1", tags=["rules"])
 app.include_router(stats.router, prefix="/api/v1", tags=["stats"])
 app.include_router(notifications.router, prefix="/api/v1", tags=["notifications"])
+app.include_router(auth.router, prefix="/api/v1", tags=["auth"])
 
 
 @app.get("/")

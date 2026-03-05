@@ -44,6 +44,7 @@ class Settings(BaseSettings):
 
     # Feishu Notification
     FEISHU_WEBHOOK_URL: str = ""
+    FRONTEND_URL: str = "http://localhost:5173"
 
     # Git
     GIT_CACHE_DIR: str = "/tmp/code-review-git-cache"
